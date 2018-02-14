@@ -1054,7 +1054,6 @@ public class Main extends Application {
                 third.setStyle("-fx-text-fill: #ff1904");
                 third.setLayoutX(593);
                 third.setLayoutY(55);
-                //todo: finish this scene, add gifs and images to all scenes that are missing them, continue polishing, add sound to correct answer scenes, handle errors when getting wrong answer
                 layout13.getChildren().removeAll(listAdd, checkButton1, list, hello);
                 label13.setText("Correct! Now that we have an element in the arraylist,\n" +
                         "suppose we added 3 more elements(making a total of 4) to the list.\n" +
@@ -1317,8 +1316,8 @@ public class Main extends Application {
         Label trueOrFalse = new Label("true or false");
         trueOrFalse.setFont(Font.font("System Bold", 20));
         trueOrFalse.setStyle("-fx-text-fill: #ff1904");
-        trueOrFalse.setLayoutY(25);
-        trueOrFalse.setLayoutX(760);
+        trueOrFalse.setLayoutY(26);
+        trueOrFalse.setLayoutX(763);
         Label not = new Label("NOT");
         not.setFont(Font.font("System Bold", 20));
         not.setStyle("-fx-text-fill: #ff1904");
@@ -1343,25 +1342,63 @@ public class Main extends Application {
         Pane layout16 = new Pane();
         Scene scene16 = new Scene(layout16, width, height);
         Label label16 = new Label();
-        Button trueButton = new Button("True");
-        Button falseButton = new Button("False");
-        Button backButton8 = new Button("Back");
-        Button chButton = new Button("Check");
+        JFXButton trueButton = new JFXButton("True");
+        trueButton.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+        trueButton.setFont(Font.font("System Bold", 35));
+        trueButton.setButtonType(RAISED);
+        trueButton.setMinSize(buttonWidth, buttonHeight);
+        trueButton.setLayoutY(350);
+        trueButton.setLayoutX(middleX);
+        JFXButton falseButton = new JFXButton("False");
+        falseButton.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+        falseButton.setFont(Font.font("System Bold", 35));
+        falseButton.setButtonType(RAISED);
+        falseButton.setMinSize(buttonWidth, buttonHeight);
+        falseButton.setLayoutY(450);
+        falseButton.setLayoutX(middleX);
+        JFXButton backButton8 = new JFXButton("Back");
+        backButton8.setButtonType(RAISED);
+        backButton8.setMinSize(buttonWidth, buttonHeight);
+        backButton8.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+        backButton8.setFont(Font.font("System Bold", 35));
+        backButton8.setLayoutX(middleX);
+        backButton8.setLayoutY(550);
+        JFXButton chButton = new JFXButton("Check");
+        chButton.setButtonType(RAISED);
+        chButton.setFont(Font.font("System Bold", 35));
+        chButton.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+        chButton.setMinSize(buttonWidth, buttonHeight);
+        chButton.setLayoutY(450);
+        chButton.setLayoutX(middleX);
         String loopCorrect = "FOR LOOP".replaceAll("\\s", "");
-        Button button16 = new Button("Next");
+        JFXButton button16 = new JFXButton("Next");
+        button16.setButtonType(RAISED);
+        button16.setMinSize(buttonWidth, buttonHeight);
+        button16.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+        button16.setFont(Font.font("System Bold", 35));
+        button16.setLayoutY(350);
+        button16.setLayoutX(middleX);
+        Label FOR = new Label("FOR");
+        FOR.setFont(Font.font("System Bold", 24));
+        FOR.setStyle("-fx-text-fill: #ff1904");
+        FOR.setLayoutX(150);
+        FOR.setLayoutY(28);
         label16.setText("Time for another quiz! This one is about loops.\n" +
-                "True or False: A FOR loop does something while something is true or false");
+                "True or False: A       loop does something while something is true or false");
         label16.setFont(Font.font("System Bold", 24));
         trueButton.setOnAction(event -> {//wrong to true or false
             label16.setText("Incorrect. Go back or try again");
         });
         falseButton.setOnAction(event -> {//right to true or false
-            layout16.getChildren().removeAll(falseButton, trueButton);
+            layout16.getChildren().removeAll(falseButton, trueButton, FOR);
             label16.setText("Correct! Earlier, we had an array and we used a loop to print out each element of the array.\n" +
                     "What type of loop was it? Type your answer in the text field");
-            TextField loopField = new TextField();
-            loopField.setPrefWidth(400);
+            label16.setFont(Font.font(21));
+            JFXTextField loopField = new JFXTextField();
+            loopField.setPrefWidth(225);
+            loopField.setPrefHeight(45);
             loopField.setPromptText("Type of loop(include 'loop')");
+            //todo: make this scene look good, more gifs and images, sound
             chButton.setOnAction(event1 -> {
                 String loopAnswer = loopField.getText().toUpperCase().replaceAll("\\s", "");
                 if (loopAnswer.equals(loopCorrect)){//if they said for loop
@@ -1391,7 +1428,7 @@ public class Main extends Application {
             });
             layout16.getChildren().addAll(loopField, chButton);
         });
-        layout16.getChildren().addAll(trueButton, falseButton, label16, backButton8);
+        layout16.getChildren().addAll(trueButton, falseButton, label16, backButton8, FOR);
 
         //Scene 17 goodbye
         Pane layout17 = new Pane();
