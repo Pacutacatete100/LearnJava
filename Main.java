@@ -443,6 +443,7 @@ public class Main extends Application {
         wrongButton3.setOnAction(event -> {
             label7.setText("Incorrect. Go back and try again");
             layout7.getChildren().addAll(backButton3);
+            layout7.getChildren().removeAll(aNumber, intl2, aNumber2, val, eight);
         });
         rightButton.setOnAction(event -> {//correct to adding 3
             backButton3.setLayoutX(middleX+5);
@@ -533,7 +534,7 @@ public class Main extends Application {
         label8.setFont(Font.font("System Bold", 22));
         ImageView ifImage = new ImageView(new Image(getClass().getResourceAsStream("/images/if-statement-syntax.png"), 600, 400, true, true));
         ifImage.setLayoutY(320);
-        ifImage.setLayoutX(350);
+        ifImage.setLayoutX(340);
         layout8.getChildren().addAll(label8, button8, ifFormat, ifExample, ifGameExample, ifGameExample2, ifGameExample3, ifImage);
 
         //scene 9 if statement quiz
@@ -681,56 +682,56 @@ public class Main extends Application {
         button10.setLayoutX(middleX);
         button10.setLayoutY(550);
         ImageView hatCollection = new ImageView(new Image(getClass().getResourceAsStream("/images/hats-collection.png"), 250, 250, true, true));
-        hatCollection.setLayoutX(325);
-        hatCollection.setLayoutY(260);
+        hatCollection.setLayoutX(333);
+        hatCollection.setLayoutY(266);
         Label collections = new Label("collections");
         collections.setStyle("-fx-text-fill: #ff1904");
-        collections.setFont(Font.font("System Bold", 16.3));
-        collections.setLayoutX(310);
+        collections.setFont(Font.font("System Bold", 17));
+        collections.setLayoutX(320);
         Label arrays = new Label("Arrays");
         arrays.setStyle("-fx-text-fill: #ff1904");
-        arrays.setFont(Font.font("System Bold", 16.3));
-        arrays.setLayoutX(585);
-        arrays.setLayoutY(20.7);
+        arrays.setFont(Font.font("System Bold", 17));
+        arrays.setLayoutX(610);
+        arrays.setLayoutY(21.3);
         Label arrayLists = new Label("ArrayLists");
         arrayLists.setStyle("-fx-text-fill: #ff1904");
-        arrayLists.setFont(Font.font("System Bold", 16.3));
-        arrayLists.setLayoutX(675);
-        arrayLists.setLayoutY(20.7);
+        arrayLists.setFont(Font.font("System Bold", 17));
+        arrayLists.setLayoutX(710);
+        arrayLists.setLayoutY(21.3);
         Label elements = new Label("Elements.");
         elements.setStyle("-fx-text-fill: #ff1904");
-        elements.setFont(Font.font("System Bold", 16.3));
-        elements.setLayoutY(60.6);
-        elements.setLayoutX(250);
+        elements.setFont(Font.font("System Bold", 17));
+        elements.setLayoutY(66);
+        elements.setLayoutX(262);
         Label defineArray = new Label("variableType[] nameOfArray = {Elements of array};");
         defineArray.setStyle("-fx-text-fill: #ff1904");
-        defineArray.setFont(Font.font("System Bold", 16.3));
-        defineArray.setLayoutY(100);
+        defineArray.setFont(Font.font("System Bold", 17));
+        defineArray.setLayoutY(108);
         Label squareBracketsL = new Label("[]");
         squareBracketsL.setStyle("-fx-text-fill: #ff1904");
-        squareBracketsL.setFont(Font.font("System Bold", 16.3));
-        squareBracketsL.setLayoutY(120.7);
-        squareBracketsL.setLayoutX(155);
+        squareBracketsL.setFont(Font.font("System Bold", 17));
+        squareBracketsL.setLayoutY(130);
+        squareBracketsL.setLayoutX(162);
         Label arrayExample = new Label("int[] arrayName = {3, 5, 6, 8, 9, 11};");
         arrayExample.setStyle("-fx-text-fill: #ff1904");
-        arrayExample.setFont(Font.font("System Bold", 16.3));
+        arrayExample.setFont(Font.font("System Bold", 17));
         arrayExample.setLayoutX(230);
-        arrayExample.setLayoutY(141);
+        arrayExample.setLayoutY(153);
         Label printElement = new Label("System.out.println(arrayName[0]);");
         printElement.setStyle("-fx-text-fill: #ff1904");
-        printElement.setFont(Font.font("System Bold", 16.3));
-        printElement.setLayoutY(180);
+        printElement.setFont(Font.font("System Bold", 17));
+        printElement.setLayoutY(197);
         Label zeroNotOne = new Label("0, not 1.");
         zeroNotOne.setStyle("-fx-text-fill: #ff1904");
-        zeroNotOne.setFont(Font.font("System Bold", 16.3));
-        zeroNotOne.setLayoutY(201);
-        zeroNotOne.setLayoutX(425);
+        zeroNotOne.setFont(Font.font("System Bold", 17));
+        zeroNotOne.setLayoutY(220);
+        zeroNotOne.setLayoutX(443);
         Label index = new Label("index(the number assigned to each element)");
         index.setStyle("-fx-text-fill: #ff1904");
-        index.setFont(Font.font("System Bold", 16.3));
-        index.setLayoutX(340);
-        index.setLayoutY(220);
-        Label label10 = new Label("In programming, there are things called                  , which are, well, collections of a thing.\n" +
+        index.setFont(Font.font("System Bold", 17));
+        index.setLayoutX(356);
+        index.setLayoutY(242);
+        Label label10 = new Label("In programming, there are things called                   , which are, well, collections of a thing.\n" +
                 "In Java, there are multiple types of collections, but the main ones are called              and \n" +
                 "Arrays are containers that hold a fixed number of a single type of variable.\n" +
                 "The things in an Array are called\n" +
@@ -739,10 +740,10 @@ public class Main extends Application {
                 "the square brackets    is what makes this an Array.\n" +
                 "Lets say you have this array:\n" +
                 "The array has 6 elements. Lets say you want to display the first element. To do that, you would have to write\n" +
-                "                                                          Why?\n" +
+                "                                                           Why?\n" +
                 "In programming, unlike real life, we count starting from \n" +
-                "So the third element in an Array would be of                                                                           would be 2.");
-        label10.setFont(Font.font("System Bold", 16.3));
+                "So the third element in an Array would be of                                                                             would be 2.");
+        label10.setFont(Font.font("System Bold", 17));
         layout10.getChildren().addAll(button10, label10, hatCollection, collections, arrays, arrayLists, elements,
                 defineArray, squareBracketsL, arrayExample, printElement, zeroNotOne, index);
 
@@ -777,12 +778,13 @@ public class Main extends Application {
                 "If you are having trouble, you can always go back");
         label11.setFont(Font.font("System Bold", 27));
         JFXTextField arrayField = new JFXTextField();
+        arrayField.setFont(Font.font("System Bold", 21));
         arrayField.setPromptText("Write your answer here");
         arrayField.setFocusColor(Color.valueOf("#ff1904"));
         arrayField.setUnFocusColor(Color.valueOf("#901004"));
-        arrayField.setMinSize(230, 50);
-        arrayField.setLayoutX(340);
-        arrayField.setLayoutY(385);
+        arrayField.setMinSize(400, 50);
+        arrayField.setLayoutX(250);
+        arrayField.setLayoutY(365);
         JFXButton checkIndexArray = new JFXButton("Check");
         checkIndexArray.setButtonType(RAISED);
         checkIndexArray.setMinSize(136, 70);
@@ -820,9 +822,18 @@ public class Main extends Application {
                 squareBrackets.setOnAction(event1 -> {//if square brackets is pressed(correct)
                     layout11.getChildren().removeAll(squareBrackets, asterisk, forwardSlash);
                     label11.setText("Wow! Correct again!\n" +
-                            "Suppose we have an array, where the last index(not element) is 5. \n" +
+                            "Suppose we have an array, where the last \n" +
                             "How many elements does this array have?\n" +
-                            "Remember: array indexes start at 0");
+                            "\n");
+                    Label QuizHint = new Label("Remember: array indexes start at 0");
+                    QuizHint.setStyle("-fx-text-fill: #ff1904");
+                    QuizHint.setFont(Font.font("System Bold", 27));
+                    QuizHint.setLayoutY(110);
+                    Label q = new Label("index(not element) is 5.");
+                    q.setStyle("-fx-text-fill: #ff1904");
+                    q.setFont(Font.font("System Bold", 27));
+                    q.setLayoutX(543);
+                    q.setLayoutY(50);
                     JFXButton fiveButton = new JFXButton("5");
                     fiveButton.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
                     fiveButton.setFont(Font.font("System Bold", 27));
@@ -841,7 +852,7 @@ public class Main extends Application {
                     sixButton.setLayoutY(450);
                     sixButton.setLayoutX(425);
                     sixButton.setButtonType(RAISED);
-                    layout11.getChildren().addAll(fiveButton, fourButton, sixButton);
+                    layout11.getChildren().addAll(fiveButton, fourButton, sixButton, q, QuizHint);
 
                     fiveButton.setOnAction(event2 -> {//wrong
                         label11.setText("You are incorrect. Go back or try again");
@@ -852,9 +863,12 @@ public class Main extends Application {
                         layout11.getChildren().addAll(backButton5);
                     });
                     sixButton.setOnAction(event2 -> {//right
+                        ImageView confetti3 = new ImageView(new Image(getClass().getResourceAsStream("/images/confetti-clipart-animated-gif-8.gif"), 250, 250, true, true));
+                        confetti3.setLayoutY(100);
+                        confetti3.setLayoutX(325);
                         label11.setText("Wow! Right again!");
-                        layout11.getChildren().addAll(button11);
-                        layout11.getChildren().removeAll(fiveButton, sixButton, fourButton, backButton5);
+                        layout11.getChildren().addAll(button11, confetti3);
+                        layout11.getChildren().removeAll(fiveButton, sixButton, fourButton, backButton5, q, QuizHint);
                     });
                 });
                 asterisk.setOnAction(event1 -> {//if asterisks are pressed(incorrect)
@@ -872,80 +886,268 @@ public class Main extends Application {
         layout11.getChildren().addAll(label11, arrayField, checkIndexArray, backButton5, hint, arrayQuizArray);
 
         //Scene 12 on arraylists
-        //todo: labels and buttons for this scene, images for previous scenes
         Pane layout12 = new Pane();
         Scene scene12 = new Scene(layout12, width, height);
-        Button button12 = new Button("Next");
-        Label label12 = new Label("In Java, there are things called arraylists. These are another type of collections.\n" +
-                "The difference between these and normal arrays, is that you can edit arraylists, i.e. add elements or remove elements.\n" +
+        JFXButton button12 = new JFXButton("Next");
+        button12.setButtonType(RAISED);
+        button12.setFont(Font.font("System Bold", 17));
+        button12.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+        button12.setLayoutX(middleX);
+        button12.setLayoutY(500);
+        button12.setFont(Font.font("System Bold", 35));
+        Label arraylists = new Label("arraylists");
+        arraylists.setFont(Font.font("System Bold", 16));
+        arraylists.setStyle("-fx-text-fill: #ff1904");
+        arraylists.setLayoutX(240);
+        Label collection2 = new Label("collection.");
+        collection2.setFont(Font.font("System Bold", 16));
+        collection2.setStyle("-fx-text-fill: #ff1904");
+        collection2.setLayoutX(520);
+        Label editList = new Label("edit ArrayLists");
+        editList.setStyle("-fx-text-fill: #ff1904");
+        editList.setLayoutY(20);
+        editList.setLayoutX(488);
+        editList.setFont(Font.font("System Bold", 16));
+        Label addElements = new Label("add elements");
+        addElements.setStyle("-fx-text-fill: #ff1904");
+        addElements.setLayoutY(20);
+        addElements.setLayoutX(632);
+        addElements.setFont(Font.font("System Bold", 16));
+        Label remElements = new Label("remove elements");
+        remElements.setStyle("-fx-text-fill: #ff1904");
+        remElements.setLayoutX(15);
+        remElements.setLayoutY(40);
+        remElements.setFont(Font.font("System Bold", 16));
+        Label defineListL = new Label("ArrayList <type> name = new ArrayList<>();");
+        defineListL.setStyle("-fx-text-fill: #ff1904");
+        defineListL.setFont(Font.font("System Bold", 16));
+        defineListL.setLayoutY(80);
+        Label type = new Label("type");
+        type.setStyle("-fx-text-fill: #ff1904");
+        type.setFont(Font.font("System Bold", 16));
+        type.setLayoutY(100);
+        type.setLayoutX(30);
+        Label varType = new Label("variable type");
+        varType.setStyle("-fx-text-fill: #ff1904");
+        varType.setFont(Font.font("System Bold", 16));
+        varType.setLayoutY(100);
+        varType.setLayoutX(370);
+        Label int2 = new Label("int");
+        int2.setStyle("-fx-text-fill: #ff1904");
+        int2.setFont(Font.font("System Bold", 16));
+        int2.setLayoutX(386);
+        int2.setLayoutY(120);
+        Label char2 = new Label("char");
+        char2.setLayoutX(433);
+        char2.setLayoutY(120);
+        char2.setStyle("-fx-text-fill: #ff1904");
+        char2.setFont(Font.font("System Bold", 17));
+        Label listWithType = new Label("ArrayList<Integer>name = new ArrayList<>();");
+        listWithType.setStyle("-fx-text-fill: #ff1904");
+        listWithType.setFont(Font.font("System Bold", 16));
+        listWithType.setLayoutY(160);
+        Label Character = new Label("Character");
+        Character.setStyle("-fx-text-fill: #ff1904");
+        Character.setFont(Font.font("System Bold", 16));
+        Character.setLayoutY(180);
+        Character.setLayoutX(337);
+        Label ourList = new Label("ourList");
+        ourList.setStyle("-fx-text-fill: #ff1904");
+        ourList.setFont(Font.font("System Bold", 16));
+        ourList.setLayoutY(220);
+        ourList.setLayoutX(310);
+        Label integer = new Label("Integer");
+        integer.setStyle("-fx-text-fill: #ff1904");
+        integer.setFont(Font.font("System Bold", 16));
+        integer.setLayoutY(220);
+        integer.setLayoutX(427);
+        Label addSyntax = new Label("arrayListName.add(whatever you want to add(depends on the type));");
+        addSyntax.setStyle("-fx-text-fill: #ff1904");
+        addSyntax.setFont(Font.font("System Bold", 16));
+        addSyntax.setLayoutY(200);
+        addSyntax.setLayoutX(368.5);
+        Label addExample = new Label("ourList.add(5);");
+        addExample.setStyle("-fx-text-fill: #ff1904");
+        addExample.setFont(Font.font("System Bold", 16));
+        addExample.setLayoutY(240);
+        Label removeExample = new Label("arrayListName.remove(indexNumber);");
+        removeExample.setStyle("-fx-text-fill: #ff1904");
+        removeExample.setFont(Font.font("System Bold", 16));
+        removeExample.setLayoutY(260);
+        removeExample.setLayoutX(173);
+        Label printListElement = new Label("System.out.println(name.get(indexOfElement));");
+        printListElement.setStyle("-fx-text-fill: #ff1904");
+        printListElement.setFont(Font.font("System Bold", 16));
+        printListElement.setLayoutY(300);
+        printListElement.setLayoutX(425);
+        Label label12 = new Label("In Java, there are things called                  . These are another type of \n" +
+                "The difference between these and normal arrays, is that you can                         , i.e.\n" +
+                "or \n" +
                 "To define an arrayList:\n" +
-                "ArrayList <type> name = new ArrayList<>();\n" +
-                "The 'type' that goes in the triangles is basically the variable type.\n" +
-                "But in arraylists, you cant put the regular types like 'int' or 'char'.\n" +
+                "\n" +
+                "The        that goes in the triangles is basically the \n" +
+                "But in arraylists, you cant put the regular types like       or \n" +
                 "For example, if we wanted to make an arraylist of type 'int', it would look like this:\n" +
-                "ArrayList<Integer>name = new ArrayList<>();\n" +
-                "For an arraylist of type char, you would write 'Character' inside the triangles.\n" +
-                "To put or add elements to an arraylist, the line is: arrayListName.add(whatever you want ot add(depends on the type))\n" +
-                "For example, if we had an arraylist called ourList of type Integer, to add an element to the list, we would do:\n" +
-                "ourList.add(5); Which then adds 5 to our list.\n" +
-                "To remove an element: arrayListName.remove(indexNumber);\n" +
+                "\n" +
+                "For an arraylist of type char, you would write                   inside the triangles.\n" +
+                "To put or add elements to an arraylist, the line is: \n" +
+                "For example, if we had an arraylist called              of type             , to add an element to the list, we would do:\n" +
+                "                         Which then adds 5 to our list.\n" +
+                "To remove an element: \n" +
                 "Remember indexes start at 0\n" +
-                "To 'print' or display an element of an arraylist, the line is:\n" +
-                "System.out.println(name.get(indexOfElement));");
-        layout12.getChildren().addAll(label12, button12);
+                "To 'print' or display an element of an arraylist, the line is:");
+        label12.setFont(Font.font("System Bold", 16));
+        layout12.getChildren().addAll(label12, button12, arraylists, collection2, editList, addElements, remElements,
+        defineListL, type, varType, int2, char2, listWithType, Character, ourList, integer, addSyntax, addExample, removeExample, printListElement);
 
         //Scene 13, quiz on arraylists
         Pane layout13 = new Pane();
         Scene scene13 = new Scene(layout13, width, height);
-        Button backButton6 = new Button("Back");
-        Button button13 = new Button("Next");
+        JFXButton backButton6 = new JFXButton("Back");
+        backButton6.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+        backButton6.setFont(Font.font("System Bold", 35));
+        backButton6.setMinSize(buttonWidth, buttonHeight);
+        backButton6.setLayoutX(middleX);
+        backButton6.setLayoutY(500);
+        JFXButton button13 = new JFXButton("Next");
+        button13.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+        button13.setFont(Font.font("System Bold", 35));
+        button13.setMinSize(buttonWidth, buttonHeight);
+        button13.setLayoutX(middleX);
+        button13.setLayoutY(400);
+        Label list = new Label("Arraylist <String> ourList = new ArrayList<>();");
+        list.setFont(Font.font("System Bold", 23));
+        list.setStyle("-fx-text-fill: #ff1904");
+        list.setLayoutY(25);
+        list.setLayoutX(230);
+        Label hello = new Label("\"Hello\"");
+        hello.setStyle("-fx-text-fill: #ff1904");
+        hello.setFont(Font.font("System Bold", 23));
+        hello.setLayoutX(710);
+        hello.setLayoutY(55.5);
         Label label13 = new Label("Time for another quiz! This one will be about the arraylists.\n" +
-                "We have this arraylist: Arraylist <String> ourList = new ArrayList<>();\n" +
-                "Right now, the arraylist is empty, but we want to add a String that says \"Hello\"\n" +
+                "We have this arraylist: \n" +
+                "Right now, the arraylist is empty, but we want to add a String that says: \n" +
                 "In the text field below, write the line to add this string to the list\n" +
                 "Remember, if you are stuck you can always go back.");
-        TextField listAdd = new TextField();
+        label13.setFont(Font.font("System Bold", 21));
+        JFXTextField listAdd = new JFXTextField();
         listAdd.setPromptText("Write your line here");
-        listAdd.setPrefWidth(400);
+        listAdd.setPrefWidth(265);
+        listAdd.setPrefHeight(45);
+        listAdd.setFocusColor(Color.valueOf("#ff1904"));
+        listAdd.setUnFocusColor(Color.valueOf("#901004"));
+        listAdd.setLayoutY(300);
+        listAdd.setLayoutX(317.5);
+        listAdd.setFont(Font.font("System Bold", 21));
         String addCorrect = "ourList.add(\"Hello\");".replaceAll("\\s", "");
-        Button checkButton1 = new Button("Check");
+        JFXButton checkButton1 = new JFXButton("Check");
+        checkButton1.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+        checkButton1.setFont(Font.font("System Bold", 35));
+        checkButton1.setLayoutX(middleX-5);
+        checkButton1.setLayoutY(400);
         checkButton1.setOnAction(event -> {//when check button is pressed
             String addAnswer = listAdd.getText().replaceAll("\\s", "");
             if (addAnswer.equals(addCorrect)){//if adding element is correct
-                layout13.getChildren().removeAll(listAdd, checkButton1);
-                label13.setText("Correct! Now that we have an element in the arraylist, suppose we added 3 more elements(making a total of 4) to the list.\n" +
-                        "In the text fields below, write the line that would display the THIRD element in the list.\n" +
-                        "Remember indexes start at 0");
-                TextField listCall = new TextField();
-                listCall.setPrefWidth(400);
+                Label third = new Label("THIRD");
+                third.setFont(Font.font("System Bold", 21));
+                third.setStyle("-fx-text-fill: #ff1904");
+                third.setLayoutX(593);
+                third.setLayoutY(55);
+                //todo: finish this scene, add gifs and images to all scenes that are missing them, continue polishing, add sound to correct answer scenes, handle errors when getting wrong answer
+                layout13.getChildren().removeAll(listAdd, checkButton1, list, hello);
+                label13.setText("Correct! Now that we have an element in the arraylist,\n" +
+                        "suppose we added 3 more elements(making a total of 4) to the list.\n" +
+                        "In the text fields below, write the line that would display the             element in the list.\n" +
+                        "Remember indexes start at 0\n" +
+                        "The name of our arraylist is:");
+                JFXTextField listCall = new JFXTextField();
+                listCall.setFocusColor(Color.valueOf("#ff1904"));
+                listCall.setUnFocusColor(Color.valueOf("#901004"));
+                listCall.setPrefWidth(245);
+                listCall.setPrefHeight(45);
                 listCall.setPromptText("Call element here");
+                listCall.setLayoutX(327.5);
+                listCall.setLayoutY(300);
                 String listCallCorrect = "System.out.println(ourList.get(2));";
-                Button checkButton2 = new Button("Check");
-                layout13.getChildren().addAll(listCall, checkButton2);
+                Label name = new Label("ourList");
+                name.setStyle("-fx-text-fill: #ff1904");
+                name.setFont(Font.font("System Bold",21));
+                name.setLayoutY(108);
+                name.setLayoutX(275);
+                JFXButton checkButton2 = new JFXButton("Check");
+                checkButton2.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+                checkButton2.setFont(Font.font("System Bold", 35));
+                checkButton2.setLayoutY(400);
+                checkButton2.setLayoutX(middleX-5);
+                layout13.getChildren().addAll(listCall, checkButton2, third, name);
                 checkButton2.setOnAction(event1 -> {//if second check button is pressed
                     String listCallAnswer = listCall.getText().replaceAll("\\s", "");
                     if (listCallAnswer.equals(listCallCorrect)){//if calling element from list is correct
-                        layout13.getChildren().removeAll(listCall, checkButton2);
+                        layout13.getChildren().removeAll(listCall, checkButton2, third, name);
                         label13.setText("You are right again! Which of the symbols below is used to define an arraylist?");
-                        Button diamondButton = new Button("<>");
-                        Button squareButton = new Button("[]");
-                        Button slashButton = new Button("//");
+                        JFXButton diamondButton = new JFXButton("<>");
+                        diamondButton.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+                        diamondButton.setFont(Font.font("System Bold", 25));
+                        diamondButton.setLayoutX(420);
+                        diamondButton.setLayoutY(200);
+                        JFXButton squareButton = new JFXButton("[]");
+                        squareButton.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+                        squareButton.setFont(Font.font("System Bold", 25));
+                        squareButton.setLayoutY(300);
+                        squareButton.setLayoutX(425);
+                        JFXButton slashButton = new JFXButton("//");
+                        slashButton.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+                        slashButton.setFont(Font.font("System Bold", 25));
+                        slashButton.setLayoutX(425);
+                        slashButton.setLayoutY(400);
                         diamondButton.setOnAction(event2 -> {//if diamond button is pressed(correct)
+                            Label alist = new Label("arraylist");
+                            alist.setStyle("-fx-text-fill: #ff1904");
+                            alist.setLayoutX(335);
+                            alist.setLayoutY(27);
+                            alist.setFont(Font.font("System Bold", 21));
+                            Label name2 = new Label("intList");
+                            name2.setStyle("-fx-text-fill: #ff1904");
+                            name2.setFont(Font.font("System Bold", 21));
+                            name2.setLayoutY(27);
+                            name2.setLayoutX(500);
+                            Label numero = new Label("integer");
+                            numero.setStyle("-fx-text-fill: #ff1904");
+                            numero.setFont(Font.font("System Bold", 21));
+                            numero.setLayoutY(27);
+                            numero.setLayoutX(640);
                             label13.setText("Home Run!\n" +
-                                    "Now, in the field below, define an arraylist named 'intList' that has integers as its elements");
+                                    "Now, in the field below, define an                named            of type");
                             layout13.getChildren().removeAll(squareButton, diamondButton, slashButton);
-                            TextField defineList = new TextField();
+                            JFXTextField defineList = new JFXTextField();
                             defineList.setPromptText("Define your list here");
-                            defineList.setPrefWidth(400);
-                            Button checkButton3 = new Button("Check");
+                            defineList.setFocusColor(Color.valueOf("#ff1904"));
+                            defineList.setUnFocusColor(Color.valueOf("#901004"));
+                            defineList.setFont(Font.font("System Bold", 19));
+                            defineList.setPrefWidth(450);
+                            defineList.setLayoutY(300);
+                            defineList.setLayoutX(225);
+                            JFXButton checkButton3 = new JFXButton("Check");
+                            checkButton3.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+                            checkButton3.setFont(Font.font("System Bold", 35));
+                            checkButton3.setMinSize(buttonWidth, buttonHeight);
+                            checkButton3.setLayoutY(400);
+                            checkButton3.setLayoutX(middleX);
                             String defineListCorrect = "ArrayList <Integer> intList = new ArrayList<>();".replaceAll("\\s", "");
                             checkButton3.setOnAction(event3 -> {//if check button 3 is pressed
                             String defineAnswer = defineList.getText().replaceAll("\\s", "");
                                 if(defineAnswer.equals(defineListCorrect)){//if defining arraylist is correct
-                                    layout13.getChildren().removeAll(checkButton3, defineList);
+                                    layout13.getChildren().removeAll(checkButton3, defineList, numero, name2, alist);
                                     label13.setText("You have correctly defined an ArrayList! You move on the the last part!");
-                                    layout13.getChildren().addAll(button13);
-
+                                    ImageView confett = new ImageView(new Image(getClass().getResourceAsStream("/images/confetti-cannon-gif-karla.gif"), 450, 450, true, true));
+                                    ImageView confett2 = new ImageView(new Image(getClass().getResourceAsStream("/images/confetti-cannon-gif-karla.gif"), 450, 450, true, true));
+                                    confett.setLayoutX(450);
+                                    confett.setLayoutY(30);
+                                    confett2.setLayoutY(30);
+                                    confett2.setLayoutX(10);
+                                    confett2.setScaleX(-1);
+                                    layout13.getChildren().addAll(button13, confett, confett2);
                                 }else if(!defineAnswer.equals(defineListCorrect)){//if defining arraylist is incorrect
                                     label13.setText("Incorrect. Try again");
 
@@ -953,7 +1155,7 @@ public class Main extends Application {
                                     label13.setText("Your answer is empty. Write your answer in the textfield.");
                                 }
                             });
-                            layout13.getChildren().addAll(defineList, checkButton3);
+                            layout13.getChildren().addAll(defineList, checkButton3, numero, name2, alist);
                         });
                         squareButton.setOnAction(event2 -> {//if square brackets button is pressed(incorrect)
                             label13.setText("Incorrect. Remember, this is to define an array. Try again");
@@ -964,7 +1166,8 @@ public class Main extends Application {
                         });
                         layout13.getChildren().addAll(diamondButton, squareButton, slashButton);
                     }else if(!listCallAnswer.equals(listCallCorrect)){//if calling element from list is incorrect
-                        label13.setText("Incorrect");
+                        label13.setText("Incorrect. Go back or try again");
+                        layout13.getChildren().removeAll(name, third);
                     }else if(listCallAnswer.equals("")){//if calling element from list is empty
                         label13.setText("Your answer is empty, enter your answer in the textfield.");
                     }
@@ -975,52 +1178,166 @@ public class Main extends Application {
                 label13.setText("The text field is empty, enter your answer before pressing check");
             }
         });
-
-        layout13.getChildren().addAll(label13, backButton6, listAdd, checkButton1);
+        layout13.getChildren().addAll(label13, backButton6, listAdd, checkButton1, list, hello);
 
         //Scene 14 for loop
         Pane layout14 = new Pane();
         Scene scene14 = new Scene(layout14, width, height);
         Label label14 = new Label();
         Button button14 = new Button("Next");
-        label14.setText("In programming, a very important concept is a loop.\n" +
-                "Loops are pieces of code that execute over and over again until a certain condition is met.\n" +
+        button14.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+        button14.setMinSize(buttonWidth, buttonHeight);
+        button14.setFont(Font.font("System Bold", 35));
+        button14.setLayoutX(middleX);
+        button14.setLayoutY(500);
+        Label loop = new Label("loop");
+        loop.setFont(Font.font("System Bold", 17));
+        loop.setStyle("-fx-text-fill: #ff1904");
+        loop.setLayoutX(370);
+        Label over = new Label("over and over");
+        over.setFont(Font.font("System Bold", 17));
+        over.setStyle("-fx-text-fill: #ff1904");
+        over.setLayoutX(308);
+        over.setLayoutY(22);
+        Label forLoop = new Label("for loop");
+        forLoop.setFont(Font.font("System Bold", 17));
+        forLoop.setStyle("-fx-text-fill: #ff1904");
+        forLoop.setLayoutX(100);
+        forLoop.setLayoutY(66);
+        Label forLoopSyntax1 = new Label("for(initialization, condition, increment/decrement){(notice how there's no semicolon here like in 'if statements'");
+        forLoopSyntax1.setFont(Font.font("System Bold", 17));
+        forLoopSyntax1.setStyle("-fx-text-fill: #ff1904");
+        forLoopSyntax1.setLayoutY(102);
+        Label forLoopSyntax2 = new Label("     something to do");
+        forLoopSyntax2.setFont(Font.font("System Bold", 17));
+        forLoopSyntax2.setStyle("-fx-text-fill: #ff1904");
+        forLoopSyntax2.setLayoutY(126);
+        Label forLoopSyntax3 = new Label("}");
+        forLoopSyntax3.setFont(Font.font("System Bold", 17));
+        forLoopSyntax3.setStyle("-fx-text-fill: #ff1904");
+        forLoopSyntax3.setLayoutY(148);
+        Label arrayForLoop = new Label("int[] ourArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};");
+        arrayForLoop.setFont(Font.font("System Bold", 17));
+        arrayForLoop.setStyle("-fx-text-fill: #ff1904");
+        arrayForLoop.setLayoutY(198);
+        arrayForLoop.setLayoutX(443);
+        Label printArray1 = new Label("for(int i = 0; i<ourArray.length; i++){");
+        printArray1.setFont(Font.font("System Bold", 17));
+        printArray1.setStyle("-fx-text-fill: #ff1904");
+        printArray1.setLayoutY(244);
+        Label printArray2 = new Label("    System.out.println(ourArray[i]);");
+        printArray2.setFont(Font.font("System Bold", 17));
+        printArray2.setStyle("-fx-text-fill: #ff1904");
+        printArray2.setLayoutY(272);
+        Label printArray3 = new Label("}");
+        printArray3.setFont(Font.font("System Bold", 17));
+        printArray3.setStyle("-fx-text-fill: #ff1904");
+        printArray3.setLayoutY(292);
+        Label iL = new Label("i");
+        iL.setFont(Font.font("System Bold", 17));
+        iL.setStyle("-fx-text-fill: #ff1904");
+        iL.setLayoutY(308);
+        iL.setLayoutX(408);
+        Label plusPlus = new Label("++");
+        plusPlus.setFont(Font.font("System Bold", 17));
+        plusPlus.setStyle("-fx-text-fill: #ff1904");
+        plusPlus.setLayoutY(350);
+        plusPlus.setLayoutX(600);
+        Label ex = new Label("index 1, 2, 3...");
+        ex.setFont(Font.font("System Bold", 17));
+        ex.setStyle("-fx-text-fill: #ff1904");
+        ex.setLayoutY(397);
+        ex.setLayoutX(325);
+        label14.setText("In programming, a very important concept is a \n" +
+                "Loops are pieces of code that execute                        again until a certain condition is met.\n" +
                 "In Java, there are many types of loops, but we will only be looking at 2.\n" +
-                "The first is a 'for loop', a loop that repeats itself a certain number of times.\n" +
+                "The first is a             , a loop that repeats itself a certain number of times.\n" +
                 "The syntax for a For Loop is:\n" +
-                "for(initialization, condition, increment/decrement){(notice how there's no semicolon at the end like in 'if statements')\n" +
-                "   something to do\n" +
-                "}\n" +
+                "\n" +
+                "\n" +
+                "\n" +
                 "These loops are mostly used for displaying multiple elements of an array or an arraylist.\n" +
-                "Lets say we have an array of integers with 10 elements, int[] ourArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};\n" +
+                "Lets say we have an array of integers with 10 elements, \n" +
                 "The most common way to print these elements out would be:\n" +
-                "for(int i = 0; i<ourArray.length; i++){\n" +
-                "   System.out.println(ourArray[i]);\n" +
-                "}\n" +
-                "The first part of this loop creates a variable named 'i' and makes it equal to 0.\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "The first part of this loop creates a variable named   and makes it equal to 0.\n" +
                 "The second part says do this while 'i' is smaller than the length of our array\n" +
-                "The third part of this increments 'i' by 1 each time the code loops over. The '++' will increase a variable by 1.\n" +
-                "Inside the parentheses we are displaying or printing the elements of index 'i', which means it will print the elements of index 1, 2, 3...");
-        layout14.getChildren().addAll(label14, button14);
+                "The third part of this increments 'i' by 1 each time the code loops over. The       will increase a variable by 1.\n" +
+                "Inside the parentheses we are displaying or printing the elements of index 'i',\n" +
+                "which means it will print the elements of ");
+        label14.setFont(Font.font("System Bold", 17));
+        layout14.getChildren().addAll(label14, button14, loop, over, forLoop, forLoopSyntax1, forLoopSyntax2, forLoopSyntax3,
+        arrayForLoop, printArray1, printArray2, printArray3, iL, plusPlus, ex);
 
         //Scene 15 while loops
         Pane layout15 = new Pane();
         Scene scene15 = new Scene(layout15, width, height);
         Label label15 = new Label();
-        Button button15 = new Button("Next");
-        Button backButton7 = new Button("Back");
-        label15.setText("The second type and one of the most common type of loop is a 'while loop'\n" +
-                "This loop is as simple as it seems, a loop that does something while something is true or false. Keep in mind, this doesn't mean only booleans work in while loops.\n" +
-                "an example of a while loop could be:\n" +
-                "int num = 10;\n" +
-                "while(num<20){\n" +
-                "   System.out.println(num);\n" +
-                "   num++;\n" +
-                "}\n" +
-                "This basically says that while our number that is equal to 10 is smaller than 20, print out our number and increment it by 1.\n" +
-                "These are the basics of loops, a very important concept in programming");
+        JFXButton button15 = new JFXButton("Next");
+        button15.setFont(Font.font("System Bold", 35));
+        button15.setButtonType(RAISED);
+        button15.setMinSize(buttonWidth, buttonHeight);
+        button15.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+        button15.setLayoutX(middleX);
+        button15.setLayoutY(400);
+        JFXButton backButton7 = new JFXButton("Back");
+        backButton7.setFont(Font.font("System Bold", 35));
+        backButton7.setButtonType(RAISED);
+        backButton7.setMinSize(buttonWidth, buttonHeight);
+        backButton7.setStyle("-fx-background-color: #0270ee; -fx-text-fill: white; -fx-background-radius: 17");
+        backButton7.setLayoutY(500);
+        backButton7.setLayoutX(middleX);
 
-        layout15.getChildren().addAll(button15, label15, backButton7);
+        Label whileLoop = new Label("while loop");
+        whileLoop.setFont(Font.font("System Bold", 20));
+        whileLoop.setStyle("-fx-text-fill: #ff1904");
+        whileLoop.setLayoutY(100);
+        Label declaration = new Label("int num = 10;");
+        declaration.setFont(Font.font("System Bold", 20));
+        declaration.setStyle("-fx-text-fill: #ff1904");
+        declaration.setLayoutY(120);
+        Label whileExample = new Label("while(num<20){");
+        whileExample.setFont(Font.font("System Bold", 20));
+        whileExample.setStyle("-fx-text-fill: #ff1904");
+        whileExample.setLayoutY(140);
+        Label whileExample2 = new Label("   System.out.println(num);");
+        whileExample2.setFont(Font.font("System Bold", 20));
+        whileExample2.setStyle("-fx-text-fill: #ff1904");
+        whileExample2.setLayoutY(160);
+        Label whileExample3 = new Label("   num++;");
+        whileExample3.setFont(Font.font("System Bold", 20));
+        whileExample3.setStyle("-fx-text-fill: #ff1904");
+        whileExample3.setLayoutY(180);
+        Label whileExample4 = new Label("}");
+        whileExample4.setFont(Font.font("System Bold", 20));
+        whileExample4.setStyle("-fx-text-fill: #ff1904");
+        whileExample4.setLayoutY(200);
+        Label trueOrFalse = new Label("true or false");
+        trueOrFalse.setFont(Font.font("System Bold", 20));
+        trueOrFalse.setStyle("-fx-text-fill: #ff1904");
+        trueOrFalse.setLayoutY(25);
+        trueOrFalse.setLayoutX(760);
+        Label not = new Label("NOT");
+        not.setFont(Font.font("System Bold", 20));
+        not.setStyle("-fx-text-fill: #ff1904");
+        not.setLayoutY(52);
+        not.setLayoutX(222);
+        label15.setText("The second type and one of the most common type of loop is a 'while loop'\n" +
+                "This loop is as simple as it seems, a loop that does something while something is \n" +
+                "Keep in mind, this does         mean only booleans work in while loops.\n" +
+                "an example of a while loop could be:\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "This basically says that while our number that is equal to 10 is smaller than 20,\n" +
+                "print out our number and increment it by 1.\n" +
+                "These are the basics of loops, a very important concept in programming");
+        label15.setFont(Font.font("System Bold", 20));
+        layout15.getChildren().addAll(button15, label15, backButton7, whileLoop, declaration, whileExample, whileExample2, whileExample3, whileExample4, not, trueOrFalse);
 
         //Scene 16 quiz on loops
         Pane layout16 = new Pane();
@@ -1034,6 +1351,7 @@ public class Main extends Application {
         Button button16 = new Button("Next");
         label16.setText("Time for another quiz! This one is about loops.\n" +
                 "True or False: A FOR loop does something while something is true or false");
+        label16.setFont(Font.font("System Bold", 24));
         trueButton.setOnAction(event -> {//wrong to true or false
             label16.setText("Incorrect. Go back or try again");
         });
